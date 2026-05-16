@@ -3,16 +3,21 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Calendar, Clock, ArrowLeft, Tag } from "lucide-react";
 import { blogPosts, getBlogPost, getAllSlugs } from "@/data/blog-posts";
+import { moreBlogPosts } from "@/data/blog-posts-more";
+
+const allPosts = [...blogPosts, ...moreBlogPosts];
+const getPost = (slug: string) => allPosts.find((p) => p.slug === slug);
+const allSlugs = () => allPosts.map((p) => p.slug);
 
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateStaticParams() {
-  return getAllSlugs().map((slug) => ({ slug }));
+  return allSlugs().map((slug) => ({ slug }));
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = getPost(slug);
   if (!post) return {};
   return {
     title: post.title,
@@ -210,11 +215,11 @@ function renderContent(content: string) {
 
 export default async function BlogArticlePage({ params }: Props) {
   const { slug } = await params;
-  const post = getBlogPost(slug);
+  const post = getPost(slug);
   if (!post) notFound();
 
   // Find related posts (same category, different slug)
-  const related = blogPosts
+  const related = allPosts
     .filter((p) => p.category === post.category && p.slug !== post.slug)
     .slice(0, 2);
 

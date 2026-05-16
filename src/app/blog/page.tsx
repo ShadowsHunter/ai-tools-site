@@ -63,6 +63,33 @@ const posts = [
     readTime: "5 min",
     category: "AI Writing",
   },
+  {
+    slug: "what-is-json-how-to-format",
+    title: "What is JSON and How to Format It (Beginner's Guide)",
+    excerpt:
+      "Learn what JSON is, why it matters, and how to format and validate JSON data. A beginner-friendly guide with examples.",
+    date: "2026-05-14",
+    readTime: "6 min",
+    category: "Developer",
+  },
+  {
+    slug: "how-to-compress-images-for-web",
+    title: "How to Compress Images for Web (Free Tools & Techniques)",
+    excerpt:
+      "Speed up your website by compressing images. Learn the best techniques and free tools to reduce image file size without losing quality.",
+    date: "2026-05-12",
+    readTime: "7 min",
+    category: "Web Performance",
+  },
+  {
+    slug: "best-free-developer-tools-2026",
+    title: "20 Best Free Developer Tools in 2026",
+    excerpt:
+      "A curated list of the best free tools every developer should know about. From code editors to API testers, all free.",
+    date: "2026-05-08",
+    readTime: "9 min",
+    category: "Developer",
+  },
 ];
 
 export default function BlogPage() {

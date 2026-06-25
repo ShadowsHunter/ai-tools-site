@@ -95,6 +95,63 @@ export const aiTools: AiTool[] = [
     ],
   },
   {
+    slug: "remio",
+    name: "Remio",
+    category: "AI Productivity",
+    description:
+      "Local-first AI memory and personal knowledge base for retrieving focused context from your files, webpages, recordings, emails, messages, images, and notes.",
+    longDescription:
+      "Remio is a local-first AI memory and knowledge base desktop app. It parses files, webpages, recordings, emails, messages, images, and notes into local indexes and vectors so users can retrieve focused personal context instead of repeatedly scanning directories or loading whole documents into prompts.",
+    url: "https://remio.ai/",
+    pricing: "Freemium",
+    features: [
+      "Local-first personal knowledge base",
+      "Multi-format parsing for files, webpages, recordings, emails, messages, images, and notes",
+      "Local indexes and vector retrieval",
+      "Focused personal-context retrieval for AI workflows",
+      "Desktop client with CLI and agent-skill interfaces",
+    ],
+    pros: [
+      "Keeps personal context local-first",
+      "Reduces repeated folder scanning and whole-document prompt loading",
+      "Useful across research, meetings, notes, emails, and files",
+      "Works as a shared context layer for different AI agents",
+    ],
+    cons: [
+      "Requires the Remio desktop client for CLI and agent-skill workflows",
+      "Not an open-source standalone memory backend",
+    ],
+    bestFor: [
+      "Personal AI memory",
+      "Research and document analysis",
+      "Meeting and note retrieval",
+      "Local-first knowledge management",
+      "Agent personal-context retrieval",
+    ],
+    alternatives: ["NotebookLM", "Notion AI", "Mem", "MyMind"],
+    keywords: [
+      "Remio",
+      "local-first AI memory",
+      "AI knowledge base",
+      "personal knowledge base",
+      "NotebookLM alternative",
+      "AI notes",
+      "agent memory",
+    ],
+    faq: [
+      {
+        question: "What is Remio?",
+        answer:
+          "Remio is a local-first AI memory and personal knowledge base app that indexes files, webpages, recordings, emails, messages, images, and notes for focused context retrieval.",
+      },
+      {
+        question: "Does Remio work with AI agents?",
+        answer:
+          "Yes. Remio offers CLI and agent-skill interfaces for querying indexed local context, but those workflows require the Remio desktop client to be installed and available.",
+      },
+    ],
+  },
+  {
     slug: "claude",
     name: "Claude",
     category: "AI Chatbots",
